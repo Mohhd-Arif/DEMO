@@ -9,16 +9,18 @@
 <body>
     <h1>hello world!!</h1>
     <div id='app'>
-        <div v-if="flag">
-            <h2>{{email}}</h2> 
-        </div>  
-        <button v-on:click="email = email+email">Increase mail</button> 
-        <button v-on:click="email = email-email">Decrease mail</button> 
-        <button @click="changeEmail('new email')">change email</button> 
-        <button @click="showEmail">
-            <span v-if="flag">hide email</span>
-            <span v-else>show email</span>
-        </button>
+        <div v-for="(member,index) of objs">
+            <ul v-if = member.flag>
+                <h2>{{member.name}},{{member.email}},{{member.flag}}</h2>
+            </ul>
+            <button v-on:click="member.email = member.email+member.email">Increase mail</button> 
+            <button v-on:click="member.email = member.email-member.email">Decrease mail</button> 
+            <button @click="changeEmail('new email',index)">change email</button> 
+            <button @click="showEmail(index)">
+                <span v-if="member.flag">hide details</span>
+                <span v-else>show details</span>
+            </button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

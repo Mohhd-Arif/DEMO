@@ -2,18 +2,32 @@ const app = Vue.createApp({
     // template:'<h2>i am template</h2>'
     data() {
         return {
-            name:'arif',
-            email:"we mail",
-            flag:true
+            objs:[
+                {
+                    name:'arif',
+                    email:"we mail",
+                    flag:true
+                },
+                {
+                    name:'asif',
+                    email:"we mail ashif",
+                    flag:true
+                },
+                {
+                    name:'shakib',
+                    email:"we mail shakib",
+                    flag:true
+                }
+            ]
         }
     },
     methods:{
-        changeEmail(email){
+        changeEmail(email,index){
             console.log(email);
-            this.email = email;
+            this.objs[index].email = email;
         },
-        showEmail(){
-            this.flag = !this.flag
+        showEmail(index){
+            this.objs[index].flag = !this.objs[index].flag
         }
     }
 })
