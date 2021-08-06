@@ -9,8 +9,16 @@
 <body>
     <h1>hello world!!</h1>
     <div id='app'>
-        <h2>{{email}}</h2>   
-        <button v-on:click="email = email+email">Increase age</button> 
+        <div v-if="flag">
+            <h2>{{email}}</h2> 
+        </div>  
+        <button v-on:click="email = email+email">Increase mail</button> 
+        <button v-on:click="email = email-email">Decrease mail</button> 
+        <button @click="changeEmail('new email')">change email</button> 
+        <button @click="showEmail">
+            <span v-if="flag">hide email</span>
+            <span v-else>show email</span>
+        </button>
     </div>
     <script src="app.js"></script>
 </body>

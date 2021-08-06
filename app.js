@@ -3,7 +3,17 @@ const app = Vue.createApp({
     data() {
         return {
             name:'arif',
-            email:"we mail"
+            email:"we mail",
+            flag:true
+        }
+    },
+    methods:{
+        changeEmail(email){
+            console.log(email);
+            this.email = email;
+        },
+        showEmail(){
+            this.flag = !this.flag
         }
     }
 })
