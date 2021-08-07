@@ -6,19 +6,28 @@ const app = Vue.createApp({
                 {
                     name:'arif',
                     email:"we mail",
-                    flag:true
+                    flag:true,
+                    profile:'assets/img.jpg',
+                    isFav:true
                 },
                 {
                     name:'asif',
                     email:"we mail ashif",
-                    flag:true
+                    flag:true,
+                    profile:'assets/img.png',
+                    isFav:false
+
                 },
                 {
                     name:'shakib',
                     email:"we mail shakib",
-                    flag:true
+                    flag:true,
+                    profile:'assets/image.png',
+                    isFav:true
+
                 }
-            ]
+            ],
+            url:"www.google.com"
         }
     },
     methods:{
